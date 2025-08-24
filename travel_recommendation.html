@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Travista</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <header>
+          <div class="loga">
+            <img src="images/logo.png" alt="Travista" width="100px" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="travel_recommendation.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="search">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <input
+              type="text"
+              id="search"
+              placeholder="Enter a destination or keyword"
+            />
+            <div class="sub">
+              <i class="fa-solid fa-magnifying-glass-location"></i>
+              <button id="btnSearch">Search</button>
+              <button id="btnClear">Clear</button>
+            </div>
+          </div>
+        </header>
+        <section class="home">
+          <div class="content">
+            <aside>
+              <a href="https://www.facebook.com"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+
+              <a href="https://www.facebook.com"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+
+              <a href="https://www.facebook.com"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+
+              <a href="https://www.facebook.com"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </aside>
+            <div class="intro intro-home">
+              <h2>Explore Dream Destination</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                molestias error necessitatibus nam, veniam suscipit eaque
+              </p>
+              <button id="book">Book Now</button>
+            </div>
+            <div class="display">
+              <div class="one">
+                <div class="image">
+                  <img
+                    src="images/brazil-rio-de-janeiro-christ-redeemer.webp"
+                    alt="Brazil"
+                    id="imgOne"
+                  />
+                </div>
+                <div class="description">
+                  <h5 id="headOne">Rio-de-janeiro</h5>
+                  <p id="paraOne">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas asperiores itaque nesciunt libero consequuntur
+                    sequi
+                  </p>
+                  <button id="visitOne">Visit</button>
+                </div>
+              </div>
+              <div class="two">
+                <div class="image">
+                  <img src="images/kyota.jpg" alt="Brazil" id="imgTwo" />
+                </div>
+                <div class="description">
+                  <h5 id="headTwo">Rio-de-janeiro</h5>
+                  <p id="paraTwo">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas asperiores itaque nesciunt libero consequuntur
+                    sequi
+                  </p>
+                  <button id="visitTwo">Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="travel_recommendation.js"></script>
+  </body>
+</html>

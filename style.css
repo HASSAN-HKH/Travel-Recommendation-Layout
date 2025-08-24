@@ -1,0 +1,452 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  display: grid;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(17 54 69);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "logo logo . nav nav nav . search search search search search";
+}
+
+.header-about {
+  display: grid;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(17 54 69);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "logo logo . . nav nav nav nav . . . .";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.search {
+  grid-area: search;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search button {
+  padding: 9px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(17 54 69);
+  color: white;
+  width: 80px;
+}
+
+/* .search button:first-of-type {
+  margin-right: 10px;
+} */
+
+.search input {
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  position: relative;
+  flex-basis: 50%;
+}
+
+.sub {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search i {
+  font-size: 25px;
+  color: rgb(17 54 69);
+}
+
+/* .search input::after {
+  content: "\f689";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+} */
+
+.search input::placeholder {
+  color: rgb(17 54 69);
+  font-weight: 600;
+}
+
+.home {
+  min-height: 100vh;
+  background-image: url(images/home-background.jpg);
+  background-size: cover;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "icons . intro intro intro intro . display display display display display"
+    "icons . intro intro intro intro . display display display display display"
+    "icons . intro intro intro intro . display display display display display";
+  height: 100%;
+  position: relative;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mem-con span {
+  display: block;
+  width: 250px;
+  background-color: #113645;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.content-about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "icons . intro intro intro intro intro intro intro intro intro intro"
+    "icons . intro intro intro intro intro intro intro intro intro intro";
+  height: 100%;
+  position: absolute;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+aside {
+  grid-area: icons;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+}
+
+aside i {
+  font-size: 20px;
+  color: white;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.intro h2 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  color: #edecec;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.intro button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #113645;
+  color: white;
+  opacity: 0.9;
+}
+
+.intro-about {
+  grid-area: intro;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+
+.intro-about h2 {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.intro-about p {
+  line-height: 1.5;
+}
+
+.intro-about h2 {
+  text-transform: uppercase;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.member {
+  flex: 300px;
+  margin: 20px;
+  position: relative;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.mem-con {
+  z-index: 1;
+  position: relative;
+}
+
+.member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.member img {
+  border-radius: 50%;
+}
+
+.member h4 {
+  color: white;
+  margin: 15px 0;
+}
+
+.team h3 {
+  color: white;
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+.display {
+  grid-area: display;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display > div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  /* flex-basis: 50%; */
+}
+
+.display .one:first-child {
+  margin: 20px 0 10px;
+}
+
+.intro-home {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description h5 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.description p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.description button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #143441;
+  color: white;
+}
+
+.image img {
+  width: 100%;
+}
+
+.search i {
+  display: none;
+  position: relative;
+}
+
+.search i::after {
+  content: "Beach & Country & Temple Only";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #e1ecec;
+  color: red;
+  padding: 5px;
+  left: -18px;
+  bottom: -60px;
+  border-radius: 20px;
+  z-index: 2;
+  display: none;
+  font-size: 10px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Search and clear buttons are far away from each other */
+
+.search i:hover::after {
+  display: block;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+
+.intro-contact h2 {
+  text-transform: uppercase;
+}
+
+.content-contact {
+  width: 100%;
+  grid-template-areas:
+    "icons intro intro intro intro intro form form form form form form"
+    "icons intro intro intro intro intro form form form form form form"
+    "icons intro intro intro intro intro form form form form form form";
+  align-items: center;
+  position: absolute;
+}
+
+.form {
+  height: 60%;
+  position: relative;
+}
+
+form textarea {
+  height: 200px;
+}
+
+.form form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px;
+  position: relative;
+}
+
+.form-con {
+  position: relative;
+}
+
+.form-con::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  border-radius: 10px;
+}
+
+form input,
+textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 1px solid #e1ecec;
+  outline: none;
+  color: #e1ecec;
+}
+
+form input::placeholder {
+  color: #e1ecec;
+}
+
+form textarea::placeholder {
+  color: #e1ecec;
+}
+
+form label {
+  margin: 15px 0;
+  color: #edecec;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form > input {
+  margin-top: 15px;
+  background-color: #113645;
+  color: #e1ecec;
+  border: none;
+  cursor: pointer;
+}
+
+.intro-contact h2 {
+  font-size: 70px;
+}
+
+.intro-contact {
+  text-align: center;
+}
+
+.content-contact .form {
+  grid-area: form;
+}
+
+button {
+  cursor: pointer;
+}
