@@ -1,4 +1,4 @@
-console.log("Hello");
+console.log("Hello World");
 
 const btnSearch = document.getElementById("btnSearch");
 const btnClear = document.getElementById("btnClear");
@@ -120,6 +120,26 @@ btnClear.onclick = function () {
   document.querySelector("input[id='search']").value = "";
   document.getElementsByClassName("display")[0].style.visibility = "hidden";
 };
+
+document.getElementById("ham").onclick = function () {
+  if (document.getElementById("ham").classList[1] === "fa-xmark") {
+    document.getElementById("ham").setAttribute("class", "fa-solid fa-bars");
+    document.getElementsByClassName("ham-links")[0].style.display = "none";
+    document.getElementsByClassName("home")[0].classList.toggle("show-after");
+  } else {
+    document.getElementById("ham").setAttribute("class", "fa-solid fa-xmark");
+    document.getElementsByClassName("ham-links")[0].style.display = "block";
+    document.getElementsByClassName("home")[0].classList.toggle("show-after");
+  }
+};
+
+// document.getElementById("ham").onmouseleave = function () {
+//   document.getElementById("ham").setAttribute("class", "fa-solid fa-bars");
+//   document.getElementsByClassName("ham-links")[0].style.display = "none";
+//   document.getElementsByClassName("home")[0].classList.toggle("show-after");
+// };
+
+// document.getElementById("ham").on
 
 let str = "Sydney, Australia";
 

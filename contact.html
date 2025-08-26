@@ -15,82 +15,112 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <title>About us</title>
+    <title>Contact us</title>
   </head>
   <body>
     <div class="main">
-      <div class="container">
-        <header class="header-about">
-          <div class="loga">
-            <img src="images/logo.png" alt="Travista" width="100px" />
-          </div>
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>
-        </header>
-        <section class="home">
-          <div class="content content-contact">
-            <aside>
-              <a href="https://www.facebook.com"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-
-              <a href="https://www.facebook.com"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-
-              <a href="https://www.facebook.com"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-
-              <a href="https://www.facebook.com"
-                ><i class="fa-brands fa-youtube"></i
-              ></a>
-            </aside>
-            <div class="intro intro-contact">
-              <h2>Contact Us</h2>
-              <p>Get in touch</p>
+        <div class="container">
+          <header class="header-about">
+            <div class="loga">
+              <img src="images/logo.png" alt="Travista" width="100px" />
             </div>
-            <div class="form">
-              <div class="form-con">
-                <form>
-                  <div class="name">
-                    <label for="name">Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-
-                  <div class="email">
-                    <label for="email">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div class="message">
-                    <label for="message">Message</label>
-                    <textarea
-                      name="Message"
-                      id="message"
-                      placeholder="Enter your message"
-                    ></textarea>
-                  </div>
-                  <input type="submit" value="Submit" />
-                </form>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+              <i class="fa-solid fa-bars" id="ham"></i>
+            </nav>
+          </header>
+          <section class="home home-contact">
+            <div class="ham-links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="content content-contact">
+              <aside>
+                <a href="https://www.facebook.com"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+  
+                <a href="https://www.facebook.com"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+  
+                <a href="https://www.facebook.com"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+  
+                <a href="https://www.facebook.com"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+              </aside>
+              <div class="intro intro-contact">
+                <h2>Contact Us</h2>
+                <p>Get in touch</p>
+              </div>
+              <div class="form">
+                <div class="form-con">
+                  <form>
+                    <div class="name">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                      />
+                    </div>
+  
+                    <div class="email">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    <div class="message">
+                      <label for="message">Message</label>
+                      <textarea
+                        name="Message"
+                        id="message"
+                        placeholder="Enter your message"
+                      ></textarea>
+                    </div>
+                    <input type="submit" value="Submit" />
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
-    <script src="travel_recommendation.js"></script>
+      <script>
+        document.getElementById("ham").onclick = function () {
+          if (document.getElementById("ham").classList[1] === "fa-xmark") {
+            document
+              .getElementById("ham")
+              .setAttribute("class", "fa-solid fa-bars");
+            document.getElementsByClassName("ham-links")[0].style.display =
+              "none";
+            document
+              .getElementsByClassName("home")[0]
+              .classList.toggle("show-after");
+          } else {
+            document
+              .getElementById("ham")
+              .setAttribute("class", "fa-solid fa-xmark");
+            document.getElementsByClassName("ham-links")[0].style.display =
+              "block";
+            document
+              .getElementsByClassName("home")[0]
+              .classList.toggle("show-after");
+          }
+        };
+      </script>
   </body>
 </html>
